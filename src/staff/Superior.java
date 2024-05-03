@@ -2,26 +2,26 @@ package staff;
 
 public class Superior extends Employee{
     private Superior superior;
-private int oderlimit;
+
+    private  static int generalOrderLimit=20;
 public Superior(String name) {
     super(name);
-    this.oderlimit = generalOrderLimit;
+
 }
+
    public  void setOrderLimit(int newlimit){
        oderlimit  = newlimit;
 
     }
-    public boolean mayOrder(int testoder){
-        if (testoder <= oderlimit) {
-            return true;
-        }
-        else {
-            return false;
-        }
+
+    public static void setGeneralOrderLimit(int newgeneralOrderLimit) {
+        generalOrderLimit= newgeneralOrderLimit;
+
     }
+
     public void setSuperior(Superior superior) {
         if (superior == null) {
-            this.superior = null; // Entziehen des Vorgesetzten
+            this.superior = null;
         } else if (superior instanceof Superior) {
             this.superior = superior;
         } else {
