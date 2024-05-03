@@ -15,13 +15,13 @@ public class Adder extends  BinaryOperator {
     }
     @Override
     public String getKonstruktorausdruck() {
-        konstruktorausdruck= "Adder";
+        konstruktorausdruck= "Adder("+number+")";
         return konstruktorausdruck;
     }
 
     @Override
     public double   apply(double argument) {
-
+        toapply=argument;
         return wert =argument+number;
     }
 

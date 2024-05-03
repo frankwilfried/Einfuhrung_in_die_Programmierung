@@ -1,11 +1,23 @@
 package operator;
 
 abstract public class Operator {
+
+    protected double number;
+    protected double toapply;
+
     protected String name;
+
+
+    public double getWert() {
+        return wert;
+    }
+
     protected double wert ;
 
-    public Operator(String name, double wert) {
+    public Operator(double number) {
         this.wert = wert;
+        this.number = number;
+        this.name=name;
     }
 
     public String getKonstruktorausdruck() {
@@ -21,7 +33,7 @@ abstract public class Operator {
     public abstract double apply(double argument);
 
     public final String getInfo(){
-      String info="<p>"+getName()+"</p><p>Beispielaufruf: new"+getKonstruktorausdruck()+"="+wert+"</p>";
+      String info="<p>"+getName()+"</p><p>Beispielaufruf: new"+getKonstruktorausdruck()+".apply("+10.0+")"+"="+apply(10.0)+"</p>";
             return info ;
     }
 }

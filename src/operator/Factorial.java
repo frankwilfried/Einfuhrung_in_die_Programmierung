@@ -4,8 +4,10 @@ package operator;
 
 public class Factorial extends Operator {
 
-    public Factorial(String name, double wert ) {
-        super(name, wert);
+
+    public Factorial(double number) {
+
+        super(number);
     }
 
     @Override
@@ -20,6 +22,7 @@ public class Factorial extends Operator {
     }
     @Override
     public double apply(double argument) {
+        toapply=argument;
         if (argument == 1){
         return wert=  1 ;
     }

@@ -7,7 +7,7 @@ public class OperatorTest {
         System.out.println(op.getInfo());
         op = new Divider(5);
         System.out.println(op.getInfo());
-        op = new Factorial();
+        op = new Factorial(0);
         System.out.println(op.getInfo());
     }
 }

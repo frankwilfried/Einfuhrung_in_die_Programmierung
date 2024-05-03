@@ -15,13 +15,14 @@ public class Divider extends BinaryOperator {
     }
     @Override
     public String getKonstruktorausdruck() {
-        String Konstruktorausdruck= "Divider";
+        String Konstruktorausdruck= "Divider("+number+")";
         return Konstruktorausdruck;
     }
     private double divider;
     @Override
     public double apply(double argument) {
-        return wert= argument/divider;
+        toapply=argument;
+        return wert= argument/number;
     }
 
 
